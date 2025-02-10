@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пример страницы</title>
+    <title>Лучшие сервисы накрутки телеграмм подписчиков</title>
     <style>
         body {
             margin: 0;
@@ -23,12 +23,24 @@
             margin: 0 15px;
             text-decoration: none;
         }
-        .hero-image {
+        .hero {
+            position: relative;
             width: 100%;
             height: 400px;
             background-image: url('111.png');
             background-size: cover;
             background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero h1 {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 0;
+            font-size: 2em;
         }
         main {
             padding: 20px;
@@ -39,20 +51,54 @@
             text-align: center;
             padding: 10px 0;
         }
+        /* Медиазапросы для адаптации под мобильные устройства */
+        @media (max-width: 768px) {
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                margin: 5px 0;
+            }
+            .hero {
+                height: 300px;
+            }
+            .hero h1 {
+                font-size: 1.5em;
+                padding: 15px;
+            }
+            main {
+                padding: 15px;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero {
+                height: 200px;
+            }
+            .hero h1 {
+                font-size: 1.2em;
+                padding: 10px;
+            }
+            main {
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Название сайта</h1>
         <nav>
             <a href="https://www.facebook.com">Facebook</a>
             <a href="https://www.twitter.com">Twitter</a>
             <a href="https://www.instagram.com">Instagram</a>
         </nav>
     </header>
-    <div class="hero-image"></div>
+    <div class="hero">
+        <h1>Топы и рейтинги</h1>
+    </div>
     <main>
-        <h2>Заголовок страницы</h2>
+        <h2>Топ 10 накрутчиков</h2>
         <p>Здесь находится основной текст страницы. Вы можете добавить сюда любой контент по вашему усмотрению.</p>
     </main>
     <footer>
