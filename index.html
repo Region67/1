@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-<!DOCTYPE html>
-<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +11,8 @@
     <meta property="og:description" content="Краткое описание содержимого страницы для социальных сетей.">
     <meta property="og:image" content="URL_изображения_для_социальных_сетей.jpg">
     <meta property="og:url" content="URL_вашей_страницы">
-       <style>
-    body {
+    <style>
+        body {
             margin: 0;
             font-family: Arial, sans-serif;
         }
@@ -51,46 +49,36 @@
             margin: 0;
             font-size: 2em;
         }
-        main {
+        .container {
+            display: flex;
+            flex-wrap: wrap;
             padding: 20px;
+        }
+        .main-content {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .sidebar {
+            width: 30%;
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 10px;
         }
         footer {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 10px 0;
+            margin-top: 20px;
         }
-        /* Медиазапросы для адаптации под мобильные устройства */
+        /* Адаптация под мобильные устройства */
         @media (max-width: 768px) {
-            nav {
-                display: flex;
+            .container {
                 flex-direction: column;
-                align-items: center;
             }
-            nav a {
-                margin: 5px 0;
-            }
-            .hero {
-                height: 300px;
-            }
-            .hero h1 {
-                font-size: 1.5em;
-                padding: 15px;
-            }
-            main {
-                padding: 15px;
-            }
-        }
-        @media (max-width: 480px) {
-            .hero {
-                height: 200px;
-            }
-            .hero h1 {
-                font-size: 1.2em;
-                padding: 10px;
-            }
-            main {
-                padding: 10px;
+            .sidebar {
+                width: 100%;
+                margin-top: 20px;
             }
         }
     </style>
@@ -105,12 +93,20 @@
         </nav>
     </header>
     <div class="hero">
-        <h2>Заголовок страницы</h2>
+        <h1>Заголовок страницы</h1>
     </div>
-    <main>
-        <h2>Подзаголовок</h2>
-        <p>Здесь находится основной текст страницы. Вы можете добавить сюда любой контент по вашему усмотрению.</p>
-    </main>
+    <div class="container">
+        <div class="main-content">
+            <h2>Основной контент</h2>
+            <p>Здесь находится основной текст страницы. Вы можете добавить сюда любой контент по вашему усмотрению.</p>
+            <p>Дополнительная информация или описание тематики страницы.</p>
+        </div>
+        <div class="sidebar">
+            <h3>Боковая колонка</h3>
+            <p>Здесь находится дополнительная информация или реклама.</p>
+            <p>Вы можете использовать этот блок для размещения новостей, ссылок или других полезных данных.</p>
+        </div>
+    </div>
     <footer>
         <p>&copy; 2025 Название компании. Все права защищены.</p>
     </footer>
