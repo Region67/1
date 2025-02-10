@@ -13,7 +13,37 @@
     <meta property="og:url" content="URL_вашей_страницы">
     <style>
 
-
+.rating {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+        }
+        .rating label {
+            font-size: 2rem;
+            color: gold;
+        }
+        .rating label.gray {
+            color: lightgray;
+        }
+        .rating label.partial {
+            position: relative;
+            display: inline-block;
+            width: 1em;
+        }
+        .rating label.partial::before {
+            content: '★';
+            position: absolute;
+            left: 0;
+            width: 30%;
+            overflow: hidden;
+            color: gold;
+            display: inline-block;
+            white-space: nowrap;
+        }
+        .rating label.partial::after {
+            content: '★';
+            color: lightgray;
+        }
 
 
         
@@ -101,7 +131,14 @@
 
           
             <h3><strong>Bosslike:&nbsp;</strong></h3>  <img src="bosslike.jpg" alt="" width="200" />
-<p><strong>Рейтинг сервиса:&nbsp;</strong><div class="Stars" style="--rating: 2.3;" aria-label="Rating of this product is 2.3 out of 5.">
+<p><strong>Рейтинг сервиса:&nbsp;</strong><div class="rating">
+        <label class="partial"></label>
+        <label>★</label>
+        <label>★</label>
+        <label>★</label>
+        <label>★</label>
+    </div>
+    
     4,8 из 5 на основе 268 отзывов.</p>
 <p>Платформа Bosslike предлагает услуги по увеличению числа подписчиков в Telegram, что способствует повышению популярности и охвата вашего канала. Сервис работает по принципу взаимного обмена: вы выполняете задания других пользователей, зарабатываете баллы и тратите их на продвижение своего канала. Также доступна возможность приобретения баллов за деньги для ускорения процесса.&nbsp;</p>
 <p><strong>Стоимость услуг:</strong></p>
