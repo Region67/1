@@ -12,11 +12,7 @@
     <meta property="og:image" content="URL_изображения_для_социальных_сетей.jpg">
     <meta property="og:url" content="URL_вашей_страницы">
     <style>
-:root {
-  --star-size: 10px;
-  --star-color: #fff;
-  --star-background: #fc0;
-}
+
 
 .Stars {
   --percent: calc(var(--rating) / 5 * 100%);
@@ -29,7 +25,7 @@
   &::before {
     content: '★★★★★';
     letter-spacing: 3px;
-    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+    background: linear-gradient(30deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
